@@ -47,9 +47,9 @@ Merged from all three upstream repos.
 ## Long-form travel prose (blader)
 
 **Before (excerpt):**
-> Nestled along the banks of the Tagus River, Lisbon stands as a vibrant testament to Portugal's enduring spirit, where rich history and modern energy intertwine at every turn. Yes, the famous hills are challenging — my legs certainly felt it! — but every climb rewards you with breathtaking, panoramic views that make it all worthwhile. [...] Lisbon isn't just a place to visit — it's a place to fall in love with, again and again. ✨
+> Nestled along the banks of the Tagus River, Lisbon stands as a vibrant testament to Portugal's enduring spirit, where rich history and modern energy intertwine at every turn. Yes, the famous hills are challenging -- my legs certainly felt it! -- but every climb rewards you with breathtaking, panoramic views that make it all worthwhile. [...] Lisbon isn't just a place to visit -- it's a place to fall in love with, again and again. ✨
 
 **After (excerpt):**
 > The hills are the whole story and somehow never make the brochures. My hotel was up in Alfama, which photographs beautifully and translates, in practice, to climbing what felt like a six-story staircase every time I wanted coffee. By the second day my calves had opinions. [...] I would go back, but in spring and with better shoes. Lisbon does not bend over backward to make things easy for you. I think I liked that, even when my legs disagreed.
 
-What changed: promotional language went concrete, the em dashes and emoji went away, the punchline formulas became observations, and the mixed feelings stayed in because mixed feelings are what humans actually have.
+What changed: promotional language went concrete, the dashes and emoji went away, the punchline formulas became observations, and the mixed feelings stayed in because mixed feelings are what humans actually have. (The original used em dash characters; this repo keeps its own tree free of them, so the excerpt shows ` -- ` in their place.)

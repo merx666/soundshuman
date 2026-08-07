@@ -27,4 +27,4 @@ jobs:
   #     - uses: actions/setup-node@v4
   #       with:
   #         node-version: 20
-  #     - run: npx --yes git-human scan docs --fail-above 50
+  #     - run: npx --yes soundshuman scan docs --fail-above 50

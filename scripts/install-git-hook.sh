@@ -10,7 +10,7 @@ HOOK="$ROOT/.git/hooks/pre-commit"
 
 cat > "$HOOK" <<EOF
 #!/bin/sh
-# git-human slop gate (installed by install-git-hook.sh)
+# soundshuman slop gate (installed by install-git-hook.sh)
 FILES=\$(git diff --cached --name-only --diff-filter=ACM | grep -E '\\.(md|mdx|markdown|txt)\$' || true)
 [ -z "\$FILES" ] && exit 0
 STATUS=0

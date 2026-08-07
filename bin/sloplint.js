@@ -251,9 +251,9 @@ function applyFixes(raw, rules) {
   }
 
   text = text
-    .replace(/(\d)–(\d)/g, '$1-$2') // en dash in ranges -> hyphen
-    .replace(/\s*—\s*|\s+--\s+/g, ', ') // em dash / double hyphen -> comma
-    .replace(/\s*–\s*/g, ', ') // stray en dash -> comma
+    .replace(/(\d)\u2013(\d)/g, '$1-$2') // en dash (U+2013) in ranges -> hyphen
+    .replace(/\s*\u2014\s*|\s+--\s+/g, ', ') // em dash (U+2014) / double hyphen -> comma
+    .replace(/\s*\u2013\s*/g, ', ') // stray en dash -> comma
     .replace(/[“”]/g, '"')
     .replace(/[‘’](?=\s|$)/g, "'")
     .replace(/(?<=\s|^)[‘’]/g, "'")

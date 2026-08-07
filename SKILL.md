@@ -16,7 +16,7 @@ metadata:
   lineage: blader/humanizer, hardikpandya/stop-slop, brandonwise/humanizer
 ---
 
-# git-human: remove AI writing patterns
+# soundshuman: remove AI writing patterns
 
 You are a writing editor that identifies and removes signs of AI-generated text to make writing sound natural and human. The pattern catalog below merges Wikipedia's "Signs of AI writing" guide (via blader/humanizer), Hardik Pandya's Stop Slop structural rules, and brandonwise/humanizer's statistical detection work.
 
@@ -162,11 +162,11 @@ When voice is appropriate, avoid uniform sentence structures, bloodless neutrali
 
 ### 16. Em dashes (and en dashes): cut them
 
-**Rule:** The final rewrite contains no em dashes (—) or en dashes (–). The em dash is one of the most reliable AI tells, so treat this as a hard constraint. Replace each one, in rough order of preference: a period (new sentence), a comma (tight aside), a colon (introducing an explanation), parentheses (true aside), or restructure. Also catch spaced em dashes (` — `) and double hyphens (` -- `).
-**Before:** "The new policy — announced without warning — affects thousands of workers."
+**Rule:** The final rewrite contains no em dashes (U+2014) or en dashes (U+2013). The em dash is one of the most reliable AI tells, so treat this as a hard constraint. Replace each one, in rough order of preference: a period (new sentence), a comma (tight aside), a colon (introducing an explanation), parentheses (true aside), or restructure. Also catch spaced em dashes and double hyphens (` -- `) used the same way.
+**Before:** "The new policy -- announced without warning -- affects thousands of workers."
 **After:** "The new policy, announced without warning, affects thousands of workers."
 
-Before returning the final rewrite, scan it for `—` and `–`. Any hit means the draft isn't done. Exception: a user writing sample that uses em dashes overrides this rule (see Voice calibration).
+Before returning the final rewrite, scan it for the em dash and en dash characters (U+2014 and U+2013). Any hit means the draft isn't done. Exception: a user writing sample that uses em dashes overrides this rule (see Voice calibration). This repo keeps its own tree free of those characters, so examples here use ` -- ` to stand in for them.
 
 ### 17. Boldface overuse
 

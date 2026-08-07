@@ -1,4 +1,4 @@
-# git-human
+# soundshuman
 
 Keep AI slop out of your prose and your repo.
 
@@ -30,14 +30,14 @@ The long-form material lives in [references/](references/): [vocabulary](referen
 As a skill, for any harness that reads markdown skills:
 
 ```bash
-cp -r . /path/to/your/skills/git-human
+cp -r . /path/to/your/skills/soundshuman
 ```
 
 As a Claude Code plugin:
 
 ```
-/plugin marketplace add <your-github-user>/git-human
-/plugin install git-human@git-human
+/plugin marketplace add aashaexo/soundshuman
+/plugin install soundshuman@soundshuman
 ```
 
 The CLI needs nothing but Node:

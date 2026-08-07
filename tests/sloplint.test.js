@@ -34,7 +34,7 @@ test('tier-2 vocabulary needs two distinct terms', () => {
 });
 
 test('em dashes and chatbot artifacts are detected with line numbers', () => {
-  const text = 'First line is fine.\nThe policy — announced late — hurt.\nI hope this helps!';
+  const text = 'First line is fine.\nThe policy \u2014 announced late \u2014 hurt.\nI hope this helps!';
   const { findings } = analyzeText(text, rules);
   const emDash = findings.filter((f) => f.id === 'em-dash');
   assert.strictEqual(emDash.length, 2);
@@ -51,15 +51,15 @@ test('code blocks and inline code are not scanned', () => {
 });
 
 test('fix applies phrase replacements and strips em dashes', () => {
-  const { text } = applyFixes('In order to win — and win big — we act due to the fact that time is short.', rules);
-  assert.ok(!text.includes('—'));
+  const { text } = applyFixes('In order to win \u2014 and win big \u2014 we act due to the fact that time is short.', rules);
+  assert.ok(!text.includes('\u2014'));
   assert.ok(/^To win/.test(text));
   assert.ok(text.includes('because time is short'));
   assert.ok(!/in order to/i.test(text));
 });
 
 test('fix normalizes curly quotes but keeps numeric ranges readable', () => {
-  const { text } = applyFixes('He said “fine” about 2010–2023.', rules);
+  const { text } = applyFixes('He said “fine” about 2010\u20132023.', rules);
   assert.ok(text.includes('"fine"'));
   assert.ok(text.includes('2010-2023'));
 });
